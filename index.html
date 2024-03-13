@@ -8,17 +8,18 @@
     <h1>Шибениця</h1>
     <script>
         //створюємо масив із слів
-        let words = ['програмування', 'паляниця', 'борщ', 'ненька'];
+        let words = ["паляниця", "ненька", "вишиванка", "хліб", "робота", "борщ"];
         //обираємо випадкове слово
         let word = words[Math.floor(Math.random() * words.length)];
         // встановлюємо масив відповідєй
-        const answerArray = [];
-        for (let i = 0; i = word.length; i++) {
+        let answerArray = [];
+        for (let i = 0; i < word.length; i++) {
             answerArray[i] = "_";
         }
         let remainingLetters = word.length;
+     
 
-        // ігровий цикл
+        //ігровий цикл
         while (remainingLetters > 0) {
             alert(answerArray.join(" ")); // показуємо гравцю його прогрес
             // отримуємо варінти відповідей від гравця
@@ -34,11 +35,11 @@
                     if (word[j] === guess) {
                         answerArray[j] = guess;
                         remainingLetters--;
-                    };
-                };
-            };
+                    }
+                }
+            }
             // кінець ігрового циклу
-        };
+        }
         // показуємо відповідь і вітаємо гравця
         alert(answerArray.join(" "));
         alert("Здорово! Гарна робота! Відповідь була " + word);
